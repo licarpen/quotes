@@ -1,6 +1,6 @@
 export const getQuote = () => {
-  return fetch('http://futuramaapi.herokuapp.com/api/quotes/100')
+  return fetch('http://futuramaapi.herokuapp.com/api/quotes/1')
     .then(res => res.json())
-    .then(res => res[Math.floor(Math.random() * 101)]);
+    .then(res => res[0]);
 };
 
