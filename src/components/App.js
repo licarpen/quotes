@@ -1,6 +1,6 @@
 import React from 'react';
-import Quote from './quotes/Quote';
+import QuoteDisplayer from '../containers/QuoteDisplayer';
 
 export default function App() {
-  return <Quote quote='sample quote' character='sample charcater' image='sample image' />;
+  return <QuoteDisplayer />;
 }
