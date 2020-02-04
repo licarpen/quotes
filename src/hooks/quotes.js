@@ -14,5 +14,5 @@ export const useQuote = () => {
       .then(quoteObject => setQuoteObject(quoteObject));
   };
 
-  return quoteObject;
+  return { ...quoteObject, handleClick };
 };
