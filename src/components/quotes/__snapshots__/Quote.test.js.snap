@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote component matches a snapshot 1`] = `
+<div
+  className="Quote"
+>
+  <button
+    onClick={[Function]}
+  >
+    Get New Quote
+  </button>
+  <p>
+    "
+    test quote
+     --
+    test character
+    "
+  </p>
+  <img
+    src="test image"
+  />
+</div>
+`;
