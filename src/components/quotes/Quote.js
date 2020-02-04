@@ -5,7 +5,7 @@ import styles from './Quote.css';
 const Quote = ({ quote, character, image, onClick }) => (
   <div className={styles.Quote}>
     <button onClick={onClick}>Get New Quote</button>
-    <p>{quote} --{character}</p>
+    <p>&quot;{quote} --{character}&quot;</p>
     <img src={image}/>
   </div>
 );
