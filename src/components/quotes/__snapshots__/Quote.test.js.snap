@@ -10,9 +10,11 @@ exports[`Quote component matches a snapshot 1`] = `
     Get New Quote
   </button>
   <p>
+    "
     test quote
      --
     test character
+    "
   </p>
   <img
     src="test image"
