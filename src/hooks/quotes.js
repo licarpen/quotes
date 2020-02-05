@@ -1,18 +1,32 @@
 import { useState, useEffect } from 'react';
-import { getQuote } from '../services/quotesAPI';
+import { getQuotes } from '../services/quotesAPI';
 
-export const useQuote = () => {
-  const [quoteObject, setQuoteObject] = useState([]);
+export const useQuotes = () => {
+  // const [quoteObject, setQuoteObject] = useState([]);
+  const [url, setUrl] = useState('');
+  const [numQuotes, setNumQuotes] = useState([]);
+  const [character, setCharacter] = useState('');
+  const [quotesArray, setQuotesArray] = useState([]);
 
   useEffect(() => {
-    getQuote()
-      .then(quoteObject => setQuoteObject(quoteObject));
-  }, []);
+    console.log(url);
+    getQuotes(url)
+      .then(quotes => setQuotesArray(quotes));
+  }, [url]);
 
-  const handleClick = () => {
-    return getQuote()
-      .then(quoteObject => setQuoteObject(quoteObject));
+  const handleNumQuotesChange = (numQuotes) => {
+    //set numQuotes in state for range input
+    setNumQuotes(numQuotes);
   };
 
-  return { ...quoteObject, handleClick };
+  const handleCharacterChange = (character) => {
+    setCharacter(character);
+    setUrl(`http://futuramaapi.herokuapp.com/api/characters/${character}/1`);
+  };
+
+  const handleClick = (url) => {
+    setUrl(url);
+  };
+
+  return { quotesArray, handleClick, handleNumQuotesChange, handleCharacterChange, numQuotes };
 };
