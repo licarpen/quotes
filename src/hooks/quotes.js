@@ -5,7 +5,7 @@ export const useQuotes = () => {
   // const [quoteObject, setQuoteObject] = useState([]);
   const [url, setUrl] = useState('');
   const [numQuotes, setNumQuotes] = useState(2);
-  const [character, setCharacter] = useState('');
+  const [, setCharacter] = useState('');
   const [quotesArray, setQuotesArray] = useState([]);
 
   useEffect(() => {
