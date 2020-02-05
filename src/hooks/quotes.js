@@ -4,12 +4,11 @@ import { getQuotes } from '../services/quotesAPI';
 export const useQuotes = () => {
   // const [quoteObject, setQuoteObject] = useState([]);
   const [url, setUrl] = useState('');
-  const [numQuotes, setNumQuotes] = useState([]);
+  const [numQuotes, setNumQuotes] = useState(2);
   const [character, setCharacter] = useState('');
   const [quotesArray, setQuotesArray] = useState([]);
 
   useEffect(() => {
-    console.log(url);
     getQuotes(url)
       .then(quotes => setQuotesArray(quotes));
   }, [url]);

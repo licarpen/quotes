@@ -18,4 +18,8 @@
     padding: 40px;
     background: whitesmoke;
   }
+
+  .numQuotes {
+    display: inline
+  }
 }
